@@ -50,29 +50,29 @@ Evaluate the model with the testing data.
 
 #### NAME: LATHISH KANNA.M
 #### REGISTER NUMBER: 212222230073
-
-#### To Read CSV file from Google Drive :
+```
+# To Read CSV file from Google Drive :
 from google.colab import auth
 import gspread
 from google.auth import default
 import pandas as pd
 
-#### To train and test
+# To train and test
 from sklearn.model_selection import train_test_split
 
-#### To scale
+# To scale
 from sklearn.preprocessing import MinMaxScaler
 
-#### To create a neural network model
+# To create a neural network model
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
-#### Authenticate User:
+# Authenticate User:
 auth.authenticate_user()
 creds, _ = default()
 gc = gspread.authorize(creds)
 
-#### Open the Google Sheet and convert into DataFrame :
+# Open the Google Sheet and convert into DataFrame :
 worksheet = gc.open('Deep Learning').sheet1
 rows = worksheet.get_all_values()
 df = pd.DataFrame(rows[1:], columns = rows[0])
@@ -103,7 +103,7 @@ ai_brain = Sequential([
 #Compile the model
 ai_brain.compile(optimizer = 'rmsprop' , loss = 'mse')
 
-#### Fit the model
+# Fit the model
 ai_brain.fit(X_train1 , y_train,epochs = 3000)
 
 loss_df = pd.DataFrame(ai_brain.history.history)
@@ -116,7 +116,8 @@ X_n1_1=Scaler.transform(X_n1)
 ai_brain.predict(X_n1_1)
 ```
 ```
-#### Dataset Information
+```
+# Dataset Information
 ![Screenshot 2024-02-20 075748](https://github.com/Dhanudhanaraj/basic-nn-model/assets/119218812/a1e7940a-5fdc-4605-adfd-5a2373647ee8)
 
 ## OUTPUT
