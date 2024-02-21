@@ -48,8 +48,8 @@ Evaluate the model with the testing data.
 
 ## PROGRAM
 
-#### NAME:LATHISH KANNA.M
-#### REGISTER NUMBER:212222230073
+#### NAME: LATHISH KANNA.M
+#### REGISTER NUMBER: 212222230073
 
 #### To Read CSV file from Google Drive :
 from google.colab import auth
